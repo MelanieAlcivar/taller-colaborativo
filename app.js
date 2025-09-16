@@ -7,8 +7,11 @@ const frases = [
   "El café es el mejor amigo de los programadores ☕"
 ];
 
+// Mostrar frase aleatoria
 function mostrarFrase() {
   const indice = Math.floor(Math.random() * frases.length);
   const contenedor = document.getElementById("frase");
   contenedor.textContent = frases[indice];
 }
+
+
