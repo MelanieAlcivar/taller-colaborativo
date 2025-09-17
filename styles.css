@@ -1,7 +1,128 @@
+/* Archivo: styles.css */
+
+/* BASE */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 2rem;
-  background: #f4f4f9;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* TEMA CLARO */
+body.light {
+  background: #f5f7fa;
+  color: #333;
+}
+
+body.light .container {
+  background: #ffffff;
+  color: #333;
+}
+
+body.light button {
+  background: #4a90e2;
+  color: #fff;
+}
+
+body.light button:hover {
+  background: #357abd;
+}
+
+/* TEMA OSCURO */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .container {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark button {
+  background: #2d2d2d;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+body.dark button:hover {
+  background: #3a3a3a;
+  border-color: #666;
+}
+
+/* BOTON DE MODO CLARO Y OSCURO */
+button.tema {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* FRASE */
+.frase {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-style: italic;
+  min-height: 40px;
+  padding: 10px;
+}
+
+/* CONTADOR */
+#contador {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+/* INPUT PARA FRASES */
+.agregar-frase {
+  margin-top: 20px;
+}
+
+.agregar-frase input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* DISEÑO RESPONSIVO */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .frase {
+    font-size: 1rem;
+  }
+
+  .agregar-frase input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
